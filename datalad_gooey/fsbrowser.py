@@ -42,6 +42,7 @@ class GooeyFilesystemBrowser(QObject):
         tw = treewidget
         # TODO must setColumnNumber()
         # make file tree width resize to path lengths
+        tw.header().setResizeContentsPrecision(0)
         tw.header().setSectionResizeMode(QHeaderView.ResizeToContents)
         self._app = app
         self._fswatcher = QFileSystemWatcher(parent=app)
